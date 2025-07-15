@@ -1,88 +1,104 @@
- * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      
-    }
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f9f9f9;
+}
 
-    /* Blue Header */
-    .blue-header {
-      background-color: #0066b3;
-      color: white;
-      padding: 10px 20px;
-      text-align: center;
-    }
+/* Blue Header */
+.blue-header {
+  background-color: #0066b3;
+  color: white;
+  padding: 1rem;
+  text-align: center;
+}
 
-    .blue-header h1 {
-      font-size: 30px;
-    }
+.blue-header h1 {
+  font-size: 2rem;
+}
 
-    /* White Header */
-    .white-header {
-      background-color: white;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 10px 40px;
-      border-bottom: 1px solid #ccc;
-      height: 100px;
-     /* width: 80px;*/
-    }
+/* White Header */
+.white-header {
+  background-color: white;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  border-bottom: 1px solid #ccc;
+  gap: 1rem;
+}
 
-    .white-header img {
-      height: 90px;
-      width: 90px;
-      object-fit: contain;
-      margin: none;
-      display: flex;
-      margin-right: 20px;
-    }
+.white-header img,
+.white-header1 img,
+.cspitlogo img,
+.enquire img {
+  height: 70px;
+  width: auto;
+  object-fit: contain;
+}
 
-    .white-header1{
-      height: 90px;
-      width: 90px;
-      object-fit: contain;
-      margin: none;
-      margin-left: none;
-      display: flex;
-      margin-right: 200px;
-    }
-    .cspitlogo{
-      margin-right: 20px;
-    }
-    .menu {
-      display: flex;
-      gap: 20px;
-      text-align: center;
-      margin-right: 150px;
-    }
+/* Menu */
+.menu {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  margin: 1rem 0;
+}
 
-    .menu a {
-      text-decoration: none;
-      color: #000;
-      margin-right: 50px;
-      font-weight: bold;
-      transition: color 0.3s;
-      display: flex;
-      transition: text-decoration 0.5s;
-      transition: transform 0.5s;
-    }
+.menu a {
+  text-decoration: none;
+  color: #000;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
 
-    .menu a:hover {
-      color: #0066b3;
-      text-decoration: underline;
-      transform: scale(1.1);
-    }
+.menu a:hover {
+  color: #0066b3;
+  text-decoration: underline;
+  transform: scale(1.1);
+}
 
-    .enquire
-    {
-      margin-left: 0%;
-      margin-right: 0%;
+/* Content Images */
+.content img,
+.intro img {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin-top: 1rem;
+}
 
-    }
+/* Optional: Add padding for small screens */
+@media screen and (max-width: 768px) {
+  .white-header {
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+  }
+
+  .menu {
+    flex-direction: column;
+    align-items: center;
+    margin: 1rem 0;
+  }
+
+  .white-header img,
+  .white-header1 img,
+  .cspitlogo img,
+  .enquire img {
+    height: 50px;
+  }
+
+  .blue-header h1 {
+    font-size: 1.5rem;
+  }
+
+  .menu a {
+    font-size: 1rem;
+  }
+}
