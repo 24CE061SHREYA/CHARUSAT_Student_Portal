@@ -1,0 +1,118 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background-color: #f0f4f8;
+}
+
+/* Navbar */
+header {
+  background-color: #004080;
+  color: white;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header h1 {
+  font-size: 24px;
+}
+
+/* Layout */
+.container {
+  display: flex;
+  flex: 1;
+}
+
+/* Sidebar */
+aside {
+  width: 220px;
+  background-color: #002952;
+  color: white;
+  padding-top: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+aside a {
+  color: white;
+  text-decoration: none;
+  padding: 15px 20px;
+  display: block;
+  transition: background-color 0.3s;
+}
+
+aside a:hover {
+  background-color: #004080;
+}
+
+/* Main Content */
+main {
+  flex: 1;
+  padding: 2rem;
+  background-color: #fff;
+  overflow-y: auto;
+}
+
+.card {
+  background-color: #e8f0fe;
+  padding: 20px;
+  border-radius: 12px;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.card h2 {
+  color: #004080;
+  margin-bottom: 10px;
+}
+
+.stats {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.stat-box {
+  background-color: #ffffff;
+  border: 1px solid #ccc;
+  padding: 15px;
+  border-radius: 10px;
+  flex: 1;
+  text-align: center;
+}
+
+.stat-box h3 {
+  color: #002952;
+  font-size: 28px;
+}
+
+.stat-box p {
+  color: #666;
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+
+  aside {
+    width: 100%;
+    flex-direction: row;
+    overflow-x: auto;
+  }
+
+  aside a {
+    flex: 1;
+    text-align: center;
+    padding: 10px;
+  }
+}
